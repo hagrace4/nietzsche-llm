@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import { configureOpenAI } from "../config/openai-config.js";
 import { OpenAIApi } from "openai";
+import { styleLikeNietzsche } from "../utils/nietzscheStyle.js"; // Import the function from nietzscheStyle.ts
 export const generateChatCompletion = async (req, res, next) => {
     const { message } = req.body;
     try {
@@ -24,7 +25,10 @@ export const generateChatCompletion = async (req, res, next) => {
             model: "gpt-3.5-turbo",
             messages: chats,
         });
-        user.chats.push(chatResponse.data.choices[0].message);
+        // Style response like Nietzsche
+        const nietzscheResponse = styleLikeNietzsche(chatResponse.data.choices[0].message.content);
+        user.chats.push({ role: "assistant", content: nietzscheResponse });
+        // user.chats.push(chatResponse.data.choices[0].message);
         await user.save();
         return res.status(200).json({ chats: user.chats });
     }
