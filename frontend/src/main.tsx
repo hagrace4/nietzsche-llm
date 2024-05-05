@@ -11,7 +11,7 @@ axios.defaults.baseURL = "http://localhost:5000/api/v1";
 axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography: {
-    fontFamily: "Roboto Slab,serif",
+    fontFamily: "Garamond, serif",
     allVariants: { color: "white" },
   },
 });

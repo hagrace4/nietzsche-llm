@@ -84,7 +84,7 @@ const Chat = () => {
             display: "flex",
             width: "100%",
             height: "60vh",
-            bgcolor: "rgb(17,29,39)",
+            bgcolor: "gray",
             borderRadius: 5,
             flexDirection: "column",
             mx: 3,
