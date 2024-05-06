@@ -6,13 +6,13 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 config();
 const app = express();
-const corsOptions = {
-    origin: "http://ec2-52-73-249-235.compute-1.amazonaws.com",
-    credentials: true, // Important if you're handling sessions or using authentication tokens
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "http://ec2-52-73-249-235.compute-1.amazonaws.com",
+//   credentials: true, // Important if you're handling sessions or using authentication tokens
+// };
+// app.use(cors(corsOptions));
 //middlewares
-// app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 //remove it in production
