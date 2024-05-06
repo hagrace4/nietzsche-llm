@@ -9,7 +9,7 @@ const Header = () => {
   const auth = useAuth();
   return (
     <AppBar
-      sx={{ bgcolor: "transparent", position: "static", boxShadow: "none" }}
+      sx={{ bgcolor: "black", position: "static", boxShadow: "none" }}
     >
       <Toolbar sx={{ display: "flex" }}>
         <Logo />
@@ -19,14 +19,14 @@ const Header = () => {
               <NavigationLink
                 bg="#00fffc"
                 to="/chat"
-                text="Go To Chat"
+                text="Go to chat"
                 textColor="black"
               />
               <NavigationLink
                 bg="#51538f"
                 textColor="white"
                 to="/"
-                text="logout"
+                text="Log out"
                 onClick={auth.logout}
               />
             </>
@@ -35,14 +35,14 @@ const Header = () => {
               <NavigationLink
                 bg="#00fffc"
                 to="/login"
-                text="Login"
+                text="Log in"
                 textColor="black"
               />
               <NavigationLink
                 bg="#51538f"
                 textColor="white"
                 to="/signup"
-                text="Signup"
+                text="Sign up"
               />
             </>
           )}

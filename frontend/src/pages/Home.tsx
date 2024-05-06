@@ -25,22 +25,34 @@ const Home = () => {
           sx={{
             width: "100%",
             display: "flex",
-            flexDirection: { md: "row", xs: "column", sm: "column" },
+            flexDirection: { md: "row"},
             gap: 5,
             my: 10,
           }}
         >
           <img
-            src="robot.png"
-            alt="robot"
-            style={{ width: "200px", margin: "auto" }}
+            src="nietzscheportrait.jpg"
+            alt="Nietzche"
+            style={{ width: "200px", margin: "auto", marginRight: 0 }}
           />
+          <span style={{
+            fontSize: "100px",
+            minHeight: "100px",
+            display: "inline-flex",
+            alignItems: "center" }}>+</span>
           <img
-            className="image-inverted rotate"
+            className="rotate"
             src="openai.png"
             alt="openai"
-            style={{ width: "200px", margin: "auto" }}
+            style={{ width: "200px", margin: "auto", marginLeft: "0" }}
           />
+        </Box>
+        <Box>
+        <span style={{
+            fontSize: "100px",
+            minHeight: "100px",
+            display: "inline-flex",
+            alignItems: "center" }}>=</span>
         </Box>
         <Box sx={{ display: "flex", mx: "auto" }}>
           <img
@@ -51,12 +63,15 @@ const Home = () => {
               margin: "auto",
               width: isBelowMd ? "80%" : "60%",
               borderRadius: 20,
-              boxShadow: "-5px -5px 105px #64f3d5",
+              boxShadow: "0 0 10px #000",
               marginTop: 20,
               marginBottom: 20,
               padding: 10,
             }}
           />
+        </Box>
+        <Box sx={{ fontSize: "30px", mx: "200px" }}>
+          <p>Welcome to NietzscheGPT, where philosophy meets artificial intelligence. Powered by OpenAI, NietzscheGPT offers users to engage with the profound ideas of Friedrich Nietzsche. Whether you're a seasoned philosopher or just beginning your journey into Nietzschean thought, NietzscheGPT is here to stimulate your intellect and spark meaningful discourse.</p>
         </Box>
       </Box>
       <Footer />
