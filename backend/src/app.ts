@@ -12,7 +12,7 @@ const app = express();
 //   credentials: true, // Important if you're handling sessions or using authentication tokens
 // };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 //middlewares
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
