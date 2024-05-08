@@ -7,14 +7,13 @@ This repository contains the code for a full-stack application using React for t
 The project is split into two main parts:
 
 - **Frontend**: A React application created with Vite, responsible for the user interface.
-- **Backend**: An Express server that handles API requests, interacts with MongoDB, and integrates with OpenAI's API.
+- **Backend**: An Express server that handles API requests, and interacts with MongoDB, the MongoDB is hosted using MongoDB Atlas Cloud - which stores data for user Authentication/Authorization and Chat history.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
 - Node.js and npm
-- MongoDB
 - Git
 
 ## Installation
