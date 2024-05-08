@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <Box width={"100%"} height={"100%"} display="flex" flex={1}>
       <Box padding={8} mt={8} display={{ md: "flex", sm: "none", xs: "none" }}>
-        <img src="airobot.png" alt="Robot" style={{ width: "400px" }} />
+        <img src="nietzsche1882.webp" alt="Nietzsche in 1882" style={{ width: "400px", borderRadius: '50%', marginLeft: '50px'}} />
       </Box>
       <Box
         display={"flex"}
@@ -46,7 +46,7 @@ const Login = () => {
           style={{
             margin: "auto",
             padding: "30px",
-            boxShadow: "10px 10px 20px #000",
+            boxShadow: "0 0 5px #000",
             borderRadius: "10px",
             border: "none",
           }}
@@ -63,8 +63,9 @@ const Login = () => {
               textAlign="center"
               padding={2}
               fontWeight={600}
+              color="black"
             >
-              Login
+              Log in
             </Typography>
             <CustomizedInput type="email" name="email" label="Email" />
             <CustomizedInput type="password" name="password" label="Password" />
@@ -76,15 +77,16 @@ const Login = () => {
                 mt: 2,
                 width: "400px",
                 borderRadius: 2,
-                bgcolor: "#AA4465",
+                bgcolor: "#0066ff",
+                color: "white",
                 ":hover": {
-                  bgcolor: "white",
-                  color: "black",
+                  bgcolor: "#0052cc",
+                  color: "white",
                 },
               }}
               endIcon={<IoIosLogIn />}
             >
-              Login
+              Log in
             </Button>
           </Box>
         </form>

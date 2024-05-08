@@ -84,7 +84,7 @@ const Chat = () => {
             display: "flex",
             width: "100%",
             height: "60vh",
-            bgcolor: "gray",
+            bgcolor: "#555",
             borderRadius: 5,
             flexDirection: "column",
             mx: 3,
@@ -102,12 +102,11 @@ const Chat = () => {
             {auth?.user?.name[0]}
             {auth?.user?.name.split(" ")[1][0]}
           </Avatar>
-          <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
-            You are talking to a ChatBOT
+          <Typography sx={{ mx: "auto", fontFamily: "Garamond" }}>
+            You are talking to a chat bot.
           </Typography>
-          <Typography sx={{ mx: "auto", fontFamily: "work sans", my: 4, p: 3 }}>
-            You can ask some questions related to Knowledge, Business, Advices,
-            Education, etc. But avoid sharing personal information
+          <Typography sx={{ mx: "auto", fontFamily: "Garamond", my: 4, p: 3 }}>
+            You can talk about whatever you want, but avoid sharing personal information.
           </Typography>
           <Button
             onClick={handleDeleteChats}
@@ -118,7 +117,7 @@ const Chat = () => {
               fontWeight: "700",
               borderRadius: 3,
               mx: "auto",
-              bgcolor: red[300],
+              bgcolor: red[400],
               ":hover": {
                 bgcolor: red.A400,
               },
@@ -136,17 +135,6 @@ const Chat = () => {
           px: 3,
         }}
       >
-        <Typography
-          sx={{
-            fontSize: "40px",
-            color: "white",
-            mb: 2,
-            mx: "auto",
-            fontWeight: "600",
-          }}
-        >
-          Model - GPT 3.5 Turbo
-        </Typography>
         <Box
           sx={{
             width: "100%",

@@ -17,13 +17,13 @@ const Header = () => {
           {auth?.isLoggedIn ? (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#0066ff"
                 to="/chat"
                 text="Go to chat"
-                textColor="black"
+                textColor="white"
               />
               <NavigationLink
-                bg="#51538f"
+                bg="#555"
                 textColor="white"
                 to="/"
                 text="Log out"
@@ -33,13 +33,13 @@ const Header = () => {
           ) : (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#555"
                 to="/login"
                 text="Log in"
-                textColor="black"
+                textColor="white"
               />
               <NavigationLink
-                bg="#51538f"
+                bg="#0066ff"
                 textColor="white"
                 to="/signup"
                 text="Sign up"
