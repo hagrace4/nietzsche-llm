@@ -83,7 +83,7 @@ const Chat = () => {
           sx={{
             display: "flex",
             width: "100%",
-            height: "60vh",
+            height: "40vh",
             bgcolor: "#555",
             borderRadius: 5,
             flexDirection: "column",
@@ -102,11 +102,8 @@ const Chat = () => {
             {auth?.user?.name[0]}
             {auth?.user?.name.split(" ")[1][0]}
           </Avatar>
-          <Typography sx={{ mx: "auto", fontFamily: "Garamond" }}>
-            You are talking to a chat bot.
-          </Typography>
-          <Typography sx={{ mx: "auto", fontFamily: "Garamond", my: 4, p: 3 }}>
-            You can talk about whatever you want, but avoid sharing personal information.
+          <Typography sx={{ mx: "auto", fontFamily: "Garamond", p: 3, textAlign: "justify" }}>
+          You are talking to a chat bot. You can talk about whatever you want, but avoid sharing personal information.
           </Typography>
           <Button
             onClick={handleDeleteChats}
