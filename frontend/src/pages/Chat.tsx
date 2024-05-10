@@ -138,21 +138,10 @@ const Chat = () => {
           px: 3,
         }}
       >
-        <Typography
-          sx={{
-            fontSize: "40px",
-            color: "#333", // Dark gray
-            mb: 2,
-            mx: "auto",
-            fontWeight: "600",
-          }}
-        >
-          Model - GPT 3.5 Turbo
-        </Typography>
         <Box
           sx={{
             width: "100%",
-            height: "60vh",
+            height: "70vh",
             borderRadius: 3,
             mx: "auto",
             display: "flex",
