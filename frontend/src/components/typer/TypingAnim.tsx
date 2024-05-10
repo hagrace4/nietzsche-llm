@@ -7,7 +7,7 @@ const TypingAnim = () => {
         // Same substring at the start will only be typed once, initially
         "Chat with Friedrich Nietzsche",
         1000,
-        "Built with OpenAI",
+        "Built with Open-source technologies",
         1500,
         "Explore philosophy",
         1500,
