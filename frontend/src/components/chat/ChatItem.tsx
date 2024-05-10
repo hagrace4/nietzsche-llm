@@ -39,11 +39,15 @@ const ChatItem = ({
     <Box
       sx={{
         display: "flex",
-        p: 2,
-        bgcolor: "#004d5612",
+        p: 1,
+        bgcolor: "#f0f0f0",
         gap: 2,
-        borderRadius: 2,
+        borderRadius: 8,
         my: 1,
+        mx: 2, // Add margin on the sides for gap
+        maxWidth: "80%",
+        alignSelf: "flex-start",
+        alignItems: "center", // Center vertically
       }}
     >
       <Avatar sx={{ ml: "0" }}>
@@ -51,7 +55,7 @@ const ChatItem = ({
       </Avatar>
       <Box>
         {!messageBlocks && (
-          <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
+          <Typography sx={{ fontSize: "20px", color: "#333" }}>{content}</Typography>
         )}
         {messageBlocks &&
           messageBlocks.length &&
@@ -61,7 +65,7 @@ const ChatItem = ({
                 {block}
               </SyntaxHighlighter>
             ) : (
-              <Typography sx={{ fontSize: "20px" }}>{block}</Typography>
+              <Typography sx={{ fontSize: "20px", color: "#333" }}>{block}</Typography>
             )
           )}
       </Box>
@@ -70,10 +74,15 @@ const ChatItem = ({
     <Box
       sx={{
         display: "flex",
-        p: 2,
+        p: 1,
         bgcolor: "#004d56",
         gap: 2,
-        borderRadius: 2,
+        borderRadius: 8,
+        my: 1,
+        mx: 2, // Add margin on the sides for gap
+        maxWidth: "80%",
+        alignSelf: "flex-end",
+        alignItems: "center", // Center vertically
       }}
     >
       <Avatar sx={{ ml: "0", bgcolor: "black", color: "white" }}>
@@ -82,7 +91,7 @@ const ChatItem = ({
       </Avatar>
       <Box>
         {!messageBlocks && (
-          <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
+          <Typography sx={{ fontSize: "20px", color: "#fff" }}>{content}</Typography>
         )}
         {messageBlocks &&
           messageBlocks.length &&
@@ -92,7 +101,7 @@ const ChatItem = ({
                 {block}
               </SyntaxHighlighter>
             ) : (
-              <Typography sx={{ fontSize: "20px" }}>{block}</Typography>
+              <Typography sx={{ fontSize: "20px", color: "#fff" }}>{block}</Typography>
             )
           )}
       </Box>

@@ -9,21 +9,22 @@ const Header = () => {
   const auth = useAuth();
   return (
     <AppBar
-      sx={{ bgcolor: "black", position: "static", boxShadow: "none" }}
+      position="static" elevation={0} sx={{ bgcolor: "#111b27" }}
     >
       <Toolbar sx={{ display: "flex" }}>
         <Logo />
+        <div style={{ flexGrow: 1 }} /> {/* Added flexGrow to push items to the right */}
         <div>
           {auth?.isLoggedIn ? (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#FFC107"
                 to="/chat"
                 text="Go to chat"
-                textColor="black"
+                textColor="#111b27"
               />
               <NavigationLink
-                bg="#51538f"
+                bg="#F44336"
                 textColor="white"
                 to="/"
                 text="Log out"
@@ -33,13 +34,13 @@ const Header = () => {
           ) : (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#00BCD4"
                 to="/login"
                 text="Log in"
-                textColor="black"
+                textColor="#111b27"
               />
               <NavigationLink
-                bg="#51538f"
+                bg="#FF5722"
                 textColor="white"
                 to="/signup"
                 text="Sign up"
