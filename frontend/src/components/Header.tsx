@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Logo from "./shared/Logo";
@@ -9,21 +9,22 @@ const Header = () => {
   const auth = useAuth();
   return (
     <AppBar
-      sx={{ bgcolor: "black", position: "static", boxShadow: "none" }}
+      position="static" elevation={0} sx={{ bgcolor: "#111b27" }}
     >
       <Toolbar sx={{ display: "flex" }}>
         <Logo />
+        <div style={{ flexGrow: 1 }} /> {/* Added flexGrow to push items to the right */}
         <div>
           {auth?.isLoggedIn ? (
             <>
               <NavigationLink
-                bg="#0066ff"
+                bg="#FFC107"
                 to="/chat"
                 text="Go to chat"
-                textColor="white"
+                textColor="#111b27"
               />
               <NavigationLink
-                bg="#555"
+                bg="#F44336"
                 textColor="white"
                 to="/"
                 text="Log out"
@@ -33,13 +34,13 @@ const Header = () => {
           ) : (
             <>
               <NavigationLink
-                bg="#555"
+                bg="#00BCD4"
                 to="/login"
                 text="Log in"
-                textColor="white"
+                textColor="#111b27"
               />
               <NavigationLink
-                bg="#0066ff"
+                bg="#FF5722"
                 textColor="white"
                 to="/signup"
                 text="Sign up"

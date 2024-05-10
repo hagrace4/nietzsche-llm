@@ -1,6 +1,5 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Box, Avatar, Typography, Button, IconButton } from "@mui/material";
-import red from "@mui/material/colors/red";
 import { useAuth } from "../context/AuthContext";
 import ChatItem from "../components/chat/ChatItem";
 import { IoMdSend } from "react-icons/io";
@@ -69,7 +68,9 @@ const Chat = () => {
         width: "100%",
         height: "100%",
         mt: 3,
-        gap: 3,
+        gap: 1,
+        backgroundColor: "#ffffff", // Light gray background
+        color: "#333", // Dark gray text
       }}
     >
       <Box
@@ -83,27 +84,32 @@ const Chat = () => {
           sx={{
             display: "flex",
             width: "100%",
-            height: "40vh",
-            bgcolor: "#555",
-            borderRadius: 5,
+            height: "80vh",
+            bgcolor: "gray",
+            borderRadius: 3,
             flexDirection: "column",
             mx: 3,
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Shadow for depth
           }}
         >
           <Avatar
             sx={{
               mx: "auto",
               my: 2,
-              bgcolor: "white",
-              color: "black",
+              bgcolor: "#333", // Dark gray
+              color: "#fff", // White text
               fontWeight: 700,
             }}
           >
             {auth?.user?.name[0]}
             {auth?.user?.name.split(" ")[1][0]}
           </Avatar>
-          <Typography sx={{ mx: "auto", fontFamily: "Garamond", p: 3, textAlign: "justify" }}>
-          You are talking to a chat bot. You can talk about whatever you want, but avoid sharing personal information.
+          <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
+            You are talking to a ChatBOT
+          </Typography>
+          <Typography sx={{ textAlign: "center" , mx: "auto", fontFamily: "work sans", my: 4, p: 3 }}>
+            You can ask some questions related to Knowledge, Business, Advices,
+            Education, etc. But avoid sharing personal information
           </Typography>
           <Button
             onClick={handleDeleteChats}
@@ -114,9 +120,9 @@ const Chat = () => {
               fontWeight: "700",
               borderRadius: 3,
               mx: "auto",
-              bgcolor: red[400],
+              bgcolor: "#f44336", // Red accent color
               ":hover": {
-                bgcolor: red.A400,
+                bgcolor: "#d32f2f", // Darker red on hover
               },
             }}
           >
@@ -135,7 +141,7 @@ const Chat = () => {
         <Box
           sx={{
             width: "100%",
-            height: "60vh",
+            height: "70vh",
             borderRadius: 3,
             mx: "auto",
             display: "flex",
@@ -144,6 +150,8 @@ const Chat = () => {
             overflowX: "hidden",
             overflowY: "auto",
             scrollBehavior: "smooth",
+            backgroundColor: "#fff", // White background for chat window
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)", // Shadow for depth
           }}
         >
           {chatMessages.map((chat, index) => (
@@ -155,7 +163,7 @@ const Chat = () => {
           style={{
             width: "100%",
             borderRadius: 8,
-            backgroundColor: "rgb(17,27,39)",
+            backgroundColor: "#111b27", // Dark blue background for input area
             display: "flex",
             margin: "auto",
           }}
