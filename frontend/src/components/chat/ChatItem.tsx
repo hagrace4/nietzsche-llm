@@ -51,7 +51,7 @@ const ChatItem = ({
       }}
     >
       <Avatar sx={{ ml: "0" }}>
-        <img src="openai.png" alt="openai" width={"30px"} />
+        <img src="nietzsche.svg" alt="Nietzsche" width={"40px"} />
       </Avatar>
       <Box>
         {!messageBlocks && (

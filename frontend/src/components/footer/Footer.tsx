@@ -1,21 +1,35 @@
 // import React from "react";
+import { Link } from "react-router-dom";
+import { Box, Button, Typography } from "@mui/material";
 // import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <div
-        style={{
-          width: "100%",
-          minHeight: "20vh",
-          maxHeight: "30vh",
-          marginTop: 60,
-        }}
+      <Box
+        width="100%"
+        minHeight="20vh"
+        maxHeight="30vh"
+        marginTop={6}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
-        <p style={{ fontSize: "30px", textAlign: "center", padding: "20px" }}>
-          Get started now!
-        </p>
-      </div>
+        <Button
+          variant="contained"
+          sx={{ 
+            backgroundColor: "#0066ff",
+            width: "250px",
+            height: "40px"
+          }}
+          component={Link}
+          to="/login"
+        >
+          <Typography fontWeight="bold" fontSize="20px" sx={{ textTransform: "none" }}>
+            Get started!
+          </Typography>
+        </Button>
+      </Box>
     </footer>
   );
 };

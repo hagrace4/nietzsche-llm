@@ -104,13 +104,19 @@ const Chat = () => {
             {auth?.user?.name[0]}
             {auth?.user?.name.split(" ")[1][0]}
           </Avatar>
-          <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
-            You are talking to a ChatBOT
+          <Typography sx={{ textAlign: "left" , mx: "auto", fontFamily: "Garamond", my: 1, p: 3 }}>
+            You are talking to a chatbot. You can talk about anything, but avoid sharing personal information.
           </Typography>
-          <Typography sx={{ textAlign: "center" , mx: "auto", fontFamily: "work sans", my: 4, p: 3 }}>
-            You can ask some questions related to Knowledge, Business, Advices,
-            Education, etc. But avoid sharing personal information
-          </Typography>
+          <Typography sx={{ textAlign: "left", mx: "auto", fontFamily: "Garamond", my: 3, p: 3 }}>
+              Try asking about:
+              <ul>
+                <li>Eternal recurrence</li>
+                <li>Übermensch</li>
+                <li>Master-slave morality</li>
+                <li>Perspectivism</li>
+                <li>Death of God</li>
+              </ul>
+            </Typography>
           <Button
             onClick={handleDeleteChats}
             sx={{
