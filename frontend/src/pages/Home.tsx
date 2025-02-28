@@ -70,7 +70,7 @@ const Home = () => {
             }}
           />
         </Box>
-        <Box sx={{ fontSize: "30px", mx: "200px" }}>
+        <Box sx={{ fontSize: "30px", mx: "200px", lineHeight: 1.5 }}>
           <p>Welcome to NietzscheGPT, where philosophy meets artificial intelligence. Powered by OpenAI, NietzscheGPT offers users to engage with the profound ideas of Friedrich Nietzsche. Whether you're a seasoned philosopher or just beginning your journey into Nietzschean thought, NietzscheGPT is here to stimulate your intellect and spark meaningful discourse.</p>
         </Box>
       </Box>
